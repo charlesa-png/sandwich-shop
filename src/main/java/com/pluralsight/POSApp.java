@@ -12,19 +12,26 @@ public class POSApp {
 
         double regularBasePrice = 5.45;
         double largeBasePrice = 8.95;
+        double price = 0;
+
 
         if(size.toLowerCase().equals("regular") && age <= 17){
             double discountAmount = regularBasePrice * .10;
-            double price = regularBasePrice - discountAmount;
+            price = regularBasePrice - discountAmount;
         } else if(size.toLowerCase().equals("regular") && age >= 65){
             double discountAmount = regularBasePrice * .20;
-            double price = regularBasePrice - discountAmount;
+            price = regularBasePrice - discountAmount;
         } else if (size.toLowerCase().equals("large") && age <=17) {
             double discountAmount = largeBasePrice * .10;
-            double price = largeBasePrice - discountAmount;
-        } else if(size.toLowerCase().equals("large") && age >= 65){
+            price = largeBasePrice - discountAmount;
+        } else if(size.toLowerCase().equals("large") && age >= 65) {
             double discountAmount = largeBasePrice * .10;
-            double price = largeBasePrice - discountAmount;
-
+            price = largeBasePrice - discountAmount;
+        } else if(size.toLowerCase().equals("regular")){
+            price = regularBasePrice;
+        }else{
+            price = largeBasePrice;
+        }
+    System.out.printf("Total: " + price);
     }
 }
