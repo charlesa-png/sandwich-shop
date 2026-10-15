@@ -7,12 +7,16 @@ public class POSApp {
         Scanner myScanner = new Scanner(System.in);
         System.out.print("Enter sandwich size (Please enter Regular or Large):");
         String size = myScanner.nextLine();
+        //while (size.toLowerCase() = " " || !size.toLowerCase().equals("large") || ("regular")){
+        //     System.out.print("Please enter Regular or Large: ");
+       // }
         System.out.print("Enter your age:");
         int age = myScanner.nextInt();
 
         double regularBasePrice = 5.45;
         double largeBasePrice = 8.95;
-        double price = 0;
+        double price;
+
 
 
         if(size.toLowerCase().equals("regular") && age <= 17){
