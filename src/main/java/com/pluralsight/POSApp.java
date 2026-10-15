@@ -32,6 +32,6 @@ public class POSApp {
         }else{
             price = largeBasePrice;
         }
-    System.out.printf("Total: " + price);
+    System.out.printf("Total: %.2f", price);
     }
 }
